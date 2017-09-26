@@ -1,0 +1,139 @@
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.12rem;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  background-color: #eee; }
+
+.header {
+  height: 0.45rem;
+  background-color: #F2F2F2;
+  font-size: 0.2rem; }
+  .header .address {
+    position: absolute;
+    top: 0.15rem;
+    left: 0.15rem;
+    color: #999;
+    font-size: 0.14rem; }
+    .header .address i {
+      font-size: 0.14rem; }
+  .header h1 {
+    font-size: 0.14rem;
+    font-weight: normal;
+    text-align: center;
+    line-height: 0.45rem; }
+  .header .gifts {
+    position: absolute;
+    top: 0.12rem;
+    right: 0.15rem;
+    color: #999; }
+    .header .gifts i {
+      font-size: 0.2rem; }
+
+.section {
+  -webkit-flex: 1;
+  overflow-y: scroll; }
+  .section .banner .swiper-slide img {
+    width: 100%;
+    heihgt: 100%; }
+  .section .types {
+    display: -webkit-flex;
+    background-color: white;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+    box-sizing: border-box; }
+    .section .types dl {
+      -webkit-flex: 1;
+      text-align: center; }
+      .section .types dl dt {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 0.5rem;
+        text-align: center;
+        box-sizing: border-box; }
+        .section .types dl dt i {
+          color: white;
+          font-size: 0.3rem;
+          vertical-align: middle; }
+      .section .types dl dd {
+        margin-top: 0.12rem;
+        font-size: 0.12rem; }
+  .section .persons {
+    height: auto;
+    padding: 0.1rem;
+    background-color: white;
+    box-sizing: border-box; }
+    .section .persons .uls {
+      display: -webkit-flex; }
+      .section .persons .uls li {
+        -webkit-flex: 1; }
+        .section .persons .uls li img {
+          width: 100%;
+          height: auto; }
+        .section .persons .uls li .img1 {
+          padding-bottom: 4%; }
+  .section .title {
+    height: 0.5rem; }
+    .section .title h2 {
+      text-align: center;
+      line-height: 0.5rem; }
+  .section .description {
+    height: auto;
+    background-color: white; }
+    .section .description dl {
+      display: -webkit-flex;
+      height: 1.2rem;
+      border-bottom: 1px solid #ccc;
+      padding: 0.15rem 0.15rem;
+      box-sizing: border-box; }
+      .section .description dl dt {
+        width: 0.8rem;
+        height: 0.8rem; }
+        .section .description dl dt img {
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+          text-align: center; }
+      .section .description dl dd {
+        width: 96%;
+        padding-top: 0.06rem;
+        padding-left: 0.1rem;
+        position: relative; }
+        .section .description dl dd h3 {
+          font-size: 0.14rem; }
+        .section .description dl dd p {
+          font-size: 0.12rem; }
+        .section .description dl dd h4 {
+          padding-top: 0.15rem; }
+          .section .description dl dd h4 span {
+            font-size: 0.16rem;
+            color: #FD6E90; }
+        .section .description dl dd em {
+          position: absolute;
+          bottom: 0.15rem;
+          right: 0.1rem;
+          font-style: normal; }
+
+.footer {
+  height: 0.45rem;
+  background-color: #F2F2F2;
+  font-size: 0.2rem; }
+  .footer ul {
+    display: -webkit-flex; }
+    .footer ul li {
+      -webkit-flex: 1;
+      -webkit-flex-direction: column;
+      text-align: center;
+      font-size: 0.12rem;
+      vertical-align: middle;
+      padding-top: 0.06rem; }
+      .footer ul li span i {
+        font-size: 0.18rem; }
+
+/*# sourceMappingURL=style.css.map */

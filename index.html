@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=2,maximum-scale=1,user-scalable=no">
+    <title>魅狐</title>
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+         <div class="address">
+             <i class="fa fa-address-book-o"></i>
+             北京
+         </div>
+        <h1>魅狐来了</h1>
+        <div class="gifts">
+             <i class="fa fa-gift"></i>
+        </div>
+    </header>
+    <section class="section">
+
+            <div class="swiper-container banner">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/img1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img3.jpg" alt="">
+                    </div>
+                </div>
+                <!-- 分页器-->
+                <div class="swiper-pagination"></div>
+
+            </div>
+
+        <div class="types">
+            <dl>
+                <dt class="bg-fuchsia">
+                    <i class="fa fa-reddit"></i>
+                </dt>
+                <dd>服务标准</dd>
+            </dl>
+            <dl>
+                <dt class="bg-purple">
+                    <i class="fa fa-scribd"></i>
+                </dt>
+                <dd>产品标准</dd>
+            </dl>
+            <dl>
+                <dt class="bg-aqua">
+                    <i class="fa fa-chain"></i>
+                </dt>
+                <dd>技法标准</dd>
+            </dl>
+            <dl>
+                <dt class="bg-green">
+                    <i class="fa fa-cog"></i>
+                </dt>
+                <dd>选拔标准</dd>
+            </dl>
+            <dl>
+                <dt class="bg-orange">
+                    <i class="fa fa-drivers-license"></i>
+                </dt>
+                <dd>流程标准</dd>
+            </dl>
+        </div>
+        <div class="persons mt15">
+             <ul class="uls">
+                 <li class="pr10">
+                     <img src="images/pic1.png" alt="">
+
+                 </li>
+                 <li>
+                     <img src="images/pic2.png" alt="" class="img1">
+                     <img src="images/pic3.png" alt="">
+                 </li>
+             </ul>
+        </div>
+        <div class="title">
+            <h2>手艺人推荐</h2>
+        </div>
+        <div class="description">
+             <!-- <dl>
+                  <dt>
+                      <img src="images/3.jpeg" alt="">
+                  </dt>
+                  <dd>
+                      <h3>马丽</h3>
+                      <p>擅长：落枕推拿，见效快</p>
+                      <h4><span>￥99元</span> /40分钟</h4>
+                      <em>接单量:342</em>
+                  </dd>
+              </dl>
+            -->
+        </div>
+    </section>
+    <footer class="footer">
+        <ul>
+            <li>
+                <span>
+                     <i class="fa fa-tumblr"></i>
+                </span>
+                <p>首页</p>
+            </li>
+            <li>
+                <span>
+                     <i class="fa fa-font"></i>
+                </span>
+                <p>订单</p>
+            </li>
+            <li>
+                <span>
+                     <i class="fa fa-user"></i>
+                </span>
+                <p>我的</p>
+            </li>
+            <li>
+                <span>
+                     <i class="fa fa-magic"></i>
+                </span>
+                <p>更多</p>
+            </li>
+        </ul>
+    </footer>
+</body>
+<script type="text/javascript" src="js/swiper-3.4.2.min.js"></script>
+<script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/event.js"></script>
+<script type="text/javascript">
+    var mySwiper=new Swiper('.swiper-container',{
+        //direction:'vertical',
+        loop: true,
+        pagination:'.swiper-pagination',//分页器
+        autoplay:500
+    })
+
+    $.ajax({
+        url: "./data/data.json",
+        type: "get",
+        data: {
+
+        },
+        success: function (result) {
+            console.log(result.messages);
+            var str="";
+            for(var i=0;i<result.messages.length;i++){
+                str+='<dl><dt><img src='+result.messages[i].src+' alt=""></dt><dd><h3>'+result.messages[i].names+'</h3><p>'+result.messages[i].content+'</p><h4><span>'+result.messages[i].moneys+'</span> /40分钟</h4><em>'+result.messages[i].num+'</em></dd></dl>'
+            }
+
+            $('.description').html(str)
+        },
+        error: function (error) {
+            console.error('失败')
+        }
+    })
+</script>
+</html>

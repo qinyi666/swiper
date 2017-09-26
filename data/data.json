@@ -1,0 +1,25 @@
+{
+  "messages":[
+    {
+       "names":"玛丽",
+       "num":"接单量:554",
+       "content":"擅长:落单推拿、快速见效",
+       "moneys":"￥99元",
+       "src":"images/tu1.jpeg"
+    },
+    {
+      "names":"小七",
+      "num":"接单量:342",
+      "content":"擅长:从头到脚舒筋活脉，改善健康状况",
+      "moneys":"￥79元",
+      "src":"images/tu2.jpeg"
+    },
+    {
+      "names":"秋香",
+      "num":"接单量:1254",
+      "content":"擅长:全身推拿+足浴按摩的360度享受",
+      "moneys":"￥59元",
+      "src":"images/tu3.jpg"
+    }
+  ]
+}
